@@ -36,3 +36,13 @@
         justify-content: center;
     }
 }
+@media (max-width:575px) {
+    .version_detail{
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .footer_menu{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

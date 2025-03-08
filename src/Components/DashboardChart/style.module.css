@@ -2,7 +2,7 @@
 
 
 .room_chart_card {
-  padding: 41px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 14px 0px #3540520D;
   background-color: #fff;
@@ -32,6 +32,7 @@
 .room_chart_wrap {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .room_chart_header h3 {
@@ -87,7 +88,8 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  min-width: 200px;
 }
 
 .chart_status p {
@@ -133,6 +135,10 @@
   font-size: 14px;
 }
 
+.battery_chart_footer .critical_percentage:last-child {
+  margin-left: 10px;
+}
+
 .battery_chart_footer p {
   font-size: 14px;
   color: #979797;
@@ -152,15 +158,19 @@
   justify-content: center;
 }
 
-@media (min-width:1600px) {
-  .chart_status{
+@media (min-width:1800px) {
+  .chart_status {
     min-width: 200px;
+    margin-bottom: 25px;
   }
-}
 
-@media (max-width:1440px) {
+  .room_chart_wrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
   .room_chart_card {
-    padding: 25px;
+    padding: 41px;
   }
 }
 
@@ -169,7 +179,8 @@
     flex-wrap: wrap;
   }
 
-  .chart_status{
+  .chart_status {
     margin-bottom: 15px;
+    min-width: 200px;
   }
 }

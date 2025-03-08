@@ -18,13 +18,13 @@ const Dashboard = ({ STATE }) => {
   return (
     <>
       <Box className={`${styles.dashboard_wrap} ${isMenuOpen ? styles.dashboardOpen : styles.dashboardClose}`}>
-        <Box className={styles.dashboard_main_content}>
+        <Box className={styles.dashboard_main_content}>        
           <Grid2 container spacing={3}>
             <Grid2 size={{ lg: 8, xs: 12 }}>
               <Box className={styles.dashboard_title}>
                 <Box className={styles.welcome_user}>
-                  <Typography variant='h1'>Welcome, Lucy Lavender</Typography>
-                  <Typography variant='span'>/ Front_Desk Exe.</Typography>
+                  <Typography variant='h1'>Dashboard</Typography>
+                  <Typography variant='span'>/ SmartAccess</Typography>
                 </Box>
                 <Box className={styles.welcome_user}>
                   <Typography>Logged in at /</Typography>

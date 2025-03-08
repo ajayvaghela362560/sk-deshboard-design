@@ -37,7 +37,7 @@ const LocksStatusChart = () => {
   
       <Box className={styles.chartContainer}>
         <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={data} margin={{ top: 20, right: 20, left: -10, bottom: 0 }}>
+          <BarChart data={data} margin={{ top: 20, right: 20, left: -10, bottom: 0 }} bor>
             <XAxis dataKey="name" axisLine={false} tick={{ fontSize: 12, fill: "#666" }} />
             <YAxis
               axisLine={{ stroke: "#ccc" }}
@@ -46,8 +46,8 @@ const LocksStatusChart = () => {
               tick={{ fontSize: 12, fill: "#666" }}
             />
             <Tooltip cursor={false} />
-            <Bar dataKey="locked" fill="#4CAF50" barSize={16} className={styles.barNoHover} />
-            <Bar dataKey="unlocked" fill="#D32F2F" barSize={16} className={styles.barNoHover} />
+            <Bar dataKey="locked" fill="#4CAF50" barSize={16} className={styles.barNoHover} radius={[2, 2, 0, 0]}  />
+            <Bar dataKey="unlocked" fill="#D32F2F" barSize={16} className={styles.barNoHover} radius={[2, 2, 0, 0]}  />
           </BarChart>
         </ResponsiveContainer>
       </Box>

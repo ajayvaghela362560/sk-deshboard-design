@@ -12,6 +12,7 @@ import inboxicon from '../../assets/Icons/inbox-icon.svg';
 import searchicon from '../../assets/Icons/search-icon.svg';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import flagiocn from '../../assets/Icons/flag-icon.svg';
+import handgif from '../../assets/Icons/hand.gif';
 
 const Header = ({ STATE }) => {
 
@@ -35,6 +36,28 @@ const Header = ({ STATE }) => {
     setAnchorE2(null);
   }
 
+  const [anchorE3, setAnchorE3] = React.useState(null);
+  const messageOpen = Boolean(anchorE3);
+
+  const handleMessageClick = (event) => {
+    setAnchorE3(event.currentTarget);
+  };
+
+  const handleMessageClose = () => {
+    setAnchorE3(null);
+  };
+
+  const [anchorE4, setAnchorE4] = React.useState(null);
+  const countryOpen = Boolean(anchorE4);
+
+  const handleCountryClick = (event) => {
+    setAnchorE4(event.currentTarget);
+  };
+
+  const handleCountryClose = () => {
+    setAnchorE4(null);
+  };
+
   const handleMenuClick = () => {
     if (!STATE) return;
     STATE.setisMenuOpen(prev => !prev);
@@ -50,8 +73,8 @@ const Header = ({ STATE }) => {
             <MenuRoundedIcon />
           </Link>
           <Box>
-            <Typography variant='h2'>Dashboard</Typography>
-            <Typography>SmartAccess</Typography>
+            <Typography variant='h3'>Welcome back, Lucy <img src={handgif} alt="handgif" /></Typography>
+            <Typography>Front_Desk Exe.</Typography>
           </Box>
         </Box>
         <Box>
@@ -62,41 +85,67 @@ const Header = ({ STATE }) => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link>
+              <Link onClick={handleCountryClick}>
                 <img src={flagiocn} alt="flagiocn" />
               </Link>
               <Menu
-                id="notification-menu"
-                anchorEl={anchorE2}
-                open={notificationOpen}
-                onClose={handleNotificationClose}
+                id="countryDropdown"
+                anchorEl={anchorE4}
+                open={countryOpen}
+                onClose={handleCountryClose}
                 MenuListProps={{
-                  'aria-labelledby': 'notification-button',
+                  "aria-labelledby": "countryDropdown",
                 }}
                 sx={{
                   '& .MuiPaper-elevation': {
                     boxShadow: '0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.16)',
-                    maxWidth: '400px',
+                    maxWidth: '110px',
                     right: '40px',
                     width: '100%',
-                    left: 'auto !important',
                     borderRadius: '10px',
                   },
                   '& li': {
                     padding: '0px',
                     backgroundColor: 'transparent !important',
+                  },
+                  '& a':{
+                    color:'#000',
+                    textDecoration:'unset',
+                    display:'flex',
+                    alignItems:'center',
+                    fontSize:'14px',
+                    paddingLeft:'10px',
+                    '& img':{
+                      width:'35px',
+                      height:'35px',
+                    }
                   }
                 }}
               >
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleCountryClose}>
+                  <ListItem>
+                    <Link>
+                      <img src={flagiocn} alt="flagiocn" />
+                      English
+                    </Link>
+                  </ListItem>
+                </MenuItem>
+                <MenuItem>
                   <Link>
-                    <img src={searchicon} alt="searchicon" />
+                    <img src={flagiocn} alt="flagiocn" />
+                    English
                   </Link>
+                </MenuItem>
+                <MenuItem>
                   <Link>
-                    <img src={searchicon} alt="searchicon" />
+                    <img src={flagiocn} alt="flagiocn" />
+                    English
                   </Link>
+                </MenuItem>
+                <MenuItem>
                   <Link>
-                    <img src={searchicon} alt="searchicon" />
+                    <img src={flagiocn} alt="flagiocn" />
+                    English
                   </Link>
                 </MenuItem>
               </Menu>
@@ -104,27 +153,27 @@ const Header = ({ STATE }) => {
             <ListItem >
               <Link
                 id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
+                aria-controls={messageOpen ? "messagemenu" : undefined}
                 aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleNotificationClick}
+                aria-expanded={messageOpen ? "true" : undefined}
+                onClick={handleMessageClick}
                 className={styles.notification_dropdown}
               >
                 <img src={navnotification} alt="navnotification" />
-                <Box className={`${styles.notification_badge} ${styles.notification_number}`}>12</Box>
+                <Box className={`${styles.notification_badge} ${styles.notification_number}`}>120</Box>
               </Link>
               <Menu
-                id="notification-menu"
-                anchorEl={anchorE2}
-                open={notificationOpen}
-                onClose={handleNotificationClose}
+                id="messagemenu"
+                anchorEl={anchorE3}
+                open={messageOpen}
+                onClose={handleMessageClose}
                 MenuListProps={{
-                  'aria-labelledby': 'notification-button',
+                  "aria-labelledby": "messagemenu",
                 }}
                 sx={{
                   '& .MuiPaper-elevation': {
                     boxShadow: '0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.16)',
-                    maxWidth: '400px',
+                    maxWidth: { sm: '350px', xs: '320px' },
                     right: '40px',
                     width: '100%',
                     left: 'auto !important',
@@ -136,7 +185,7 @@ const Header = ({ STATE }) => {
                   }
                 }}
               >
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleMessageClose}>
                   <Box className={styles.notification_panel}>
                     <Box className={styles.notification_header}>
                       <Typography variant='h3'>Notification</Typography>
@@ -208,7 +257,7 @@ const Header = ({ STATE }) => {
                 sx={{
                   '& .MuiPaper-elevation': {
                     boxShadow: '0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.16)',
-                    maxWidth: '400px',
+                    maxWidth: { sm: '350px', xs: '320px' },
                     right: '40px',
                     width: '100%',
                     left: 'auto !important',
@@ -223,7 +272,7 @@ const Header = ({ STATE }) => {
                 <MenuItem onClick={handleClose}>
                   <Box className={styles.notification_panel}>
                     <Box className={styles.notification_header}>
-                      <Typography variant='h3'>Notification</Typography>
+                      <Typography variant='h3'>Message</Typography>
                       <Box className={styles.header_actions}>
                         <Typography variant='span' className={styles.new_notification}>8 New</Typography>
                       </Box>
@@ -263,7 +312,7 @@ const Header = ({ STATE }) => {
                     </Box>
 
                     <Box className={styles.notification_footer}>
-                      <Button className={styles.view_all_button}>View all notifications</Button>
+                      <Button className={styles.view_all_button}>View all Message</Button>
                     </Box>
                   </Box>
                 </MenuItem>
@@ -272,7 +321,7 @@ const Header = ({ STATE }) => {
             <ListItem>
               <Box className={styles.user_profile}>
                 <img src={profileicon} alt="Header Avatar" />
-                <Box>
+                <Box className={styles.user_detail}>
                   <Typography>Lucy Lavender</Typography>
                   <Typography variant='span'>Front_Desk Exe.</Typography>
                 </Box>

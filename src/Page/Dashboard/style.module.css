@@ -14,7 +14,7 @@
 .dashboard_title h1 {
     font-size: 32px;
     font-weight: 600;
-    color: #000000c9;
+    color: #1565C0;
 }
 
 .dashboard_title span {
@@ -235,6 +235,7 @@
     }
     .chart_issues{
         padding: 15px;
+        gap: 15px;
     }
     .chart_issues p{
         font-size: 18px;
