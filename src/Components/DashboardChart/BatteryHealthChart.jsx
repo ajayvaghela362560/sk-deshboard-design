@@ -6,8 +6,8 @@ import styles from './style.module.css'
 
 const data = [
     { name: "Good", value: 147, color: "#4CAF50" },
-    { name: "Moderate", value: 75, color: "#FFA500" },
-    { name: "Critical", value: 14, color: "#D32F2F" },
+    { name: "Moderate", value: 75, color: "#FFA000" },
+    { name: "Critical", value: 14, color: "#FE0000" },
 ]
 
 const total = data.reduce((sum, entry) => sum + entry.value, 0)

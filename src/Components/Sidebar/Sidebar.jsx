@@ -67,7 +67,6 @@ const Sidebar = ({ STATE }) => {
               alt="header-logo"
             />
           </Link>
-          <Divider sx={{ borderColor: "#f9f9fc" }} />
           <ListItem className={styles.sidebar_menu_active}>
             <Link href="#">
               <img src={dashboardIcon} alt="dashboard" />

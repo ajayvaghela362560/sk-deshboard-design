@@ -107,6 +107,7 @@
     align-items: center;
     gap: 12px;
     color: #fff;
+    cursor: pointer;
 }
 
 .quick_links_logo {
@@ -129,15 +130,15 @@
     position: relative;
 }
 
-.quick_links_menu {
-    background-color: #007bff;
+/* .quick_links_menu {
+    background-color: #1565C0;
     color: white;
     padding: 10px 15px;
     display: flex;
     align-items: center;
     cursor: pointer;
     border-radius: 5px;
-}
+} */
 
 .quick_links_logo img {
     width: 24px;

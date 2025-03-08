@@ -191,6 +191,12 @@
     padding: 8px 0px !important; 
 }
 
+@media (min-width:1920px) {
+    .chart_issues p{
+        margin-bottom: 15px;
+    }
+}
+
 @media (max-width:1024px) {
     .dashboard_title h1 {
         font-size: 22px;

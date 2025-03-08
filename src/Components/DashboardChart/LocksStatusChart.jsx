@@ -35,12 +35,12 @@ const LocksStatusChart = () => {
       <Box className={styles.chartContainer}>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={data} margin={{ top: 20, right: 20, left: -10, bottom: 0 }} bor>
-            <XAxis dataKey="name" axisLine={false} tick={{ fontSize: 12, fill: "#666" }} />
+            <XAxis dataKey="name" axisLine={false} tick={{ fontSize: 12, fill: "#0000008A" }} />
             <YAxis
-              axisLine={{ stroke: "#ccc" }}
+              axisLine={{ stroke: "#EEEEEE" }}
               tickLine={false}
               tickFormatter={(value) => `${value}`}
-              tick={{ fontSize: 12, fill: "#666" }}
+              tick={{ fontSize: 12, fill: "#0000008A" }}
             />
             <Tooltip cursor={false} />
             <Bar dataKey="locked" fill="#4CAF50" barSize={16} className={styles.barNoHover} radius={[2, 2, 0, 0]}  />
