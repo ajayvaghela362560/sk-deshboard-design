@@ -267,7 +267,7 @@
 
 @media (max-width:575px) {
     .header_topbar .navbar_nav {
-        gap: 10px;
+        gap: 15px;
     }
     .header_topbar{
         padding: 15px;
