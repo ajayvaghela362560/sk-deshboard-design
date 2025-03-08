@@ -54,7 +54,7 @@ const Sidebar = ({ STATE }) => {
   };
 
   return (<>
-    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar} ${isMenuOpen ? styles.quick_links_menu : ""}`}>
+    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar} ${open ? styles.quick_links_menu : ""}`}>
       <List className={styles.sidebar_menu}>
         <Link href="#" className={styles.navbar_logo}>
           <img
