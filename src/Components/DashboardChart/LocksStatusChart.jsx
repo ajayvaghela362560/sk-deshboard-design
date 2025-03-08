@@ -4,7 +4,6 @@ import { Box, Typography, Link } from "@mui/material"
 import styles from './style.module.css'
 import MoreVertIcon from "@mui/icons-material/MoreVert"
 
-
 const data = [
   { name: "Zone 1", locked: 15, unlocked: 3 },
   { name: "Floor 2", locked: 10, unlocked: 6 },
@@ -13,8 +12,7 @@ const data = [
   { name: "Floor 4", locked: 12, unlocked: 6 },
   { name: "Zone 7", locked: 7, unlocked: 7 },
   { name: "Lobby", locked: 2, unlocked: 1 },
-]
-
+];
 
 const LocksStatusChart = () => {
   return (
@@ -32,7 +30,6 @@ const LocksStatusChart = () => {
         >
           <MoreVertIcon />
         </Link>
-    
       </Box>
   
       <Box className={styles.chartContainer}>
