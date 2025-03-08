@@ -53,131 +53,125 @@ const Sidebar = ({ STATE }) => {
     setOpen(isOpen);
   };
 
-  return (
-    <>
-      <Box
-        className={`${styles.sidebar_wrap} ${
-          isMenuOpen ? styles.openSidebar : styles.closeSidebar
-        }`}
-      >
-        <List className={styles.sidebar_menu}>
-          <Link href="#" className={styles.navbar_logo}>
-            <img
-              src="https://www.devicethread.com/images/logo_light.png"
-              alt="header-logo"
-            />
+  return (<>
+    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar} ${isMenuOpen ? styles.quick_links_menu : ""}`}>
+      <List className={styles.sidebar_menu}>
+        <Link href="#" className={styles.navbar_logo}>
+          <img
+            src="https://www.devicethread.com/images/logo_light.png"
+            alt="header-logo"
+          />
+        </Link>
+        <ListItem className={styles.sidebar_menu_active}>
+          <Link href="#">
+            <img src={dashboardIcon} alt="dashboard" />
+            Dashboard
           </Link>
-          <ListItem className={styles.sidebar_menu_active}>
-            <Link href="#">
-              <img src={dashboardIcon} alt="dashboard" />
-              Dashboard
-            </Link>
-          </ListItem>
-          <ListItem className={styles.sidebar_smartmenu}>
-            <Accordion
-              expanded={expanded === "panel1"}
-              onChange={handleChange("panel1")}
+        </ListItem>
+        <ListItem className={styles.sidebar_smartmenu}>
+          <Accordion
+            expanded={expanded === "panel1"}
+            onChange={handleChange("panel1")}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1bh-content"
-                id="panel1bh-header"
-              >
-                <Link>
-                  <img src={smartaccess} alt="smartaccess" />
-                  SmartAccess
-                </Link>
-              </AccordionSummary>
-              <AccordionDetails>
-                <List className={styles.sidebar_submenu}>
-                  <ListItem>
-                    <Link>
-                      <img src={calendaricon} alt="calendaricon" />
-                      Access Management
-                    </Link>
-                  </ListItem>
-                  <ListItem>
-                    <Link>
-                      <img src={teamicon} alt="teamicon" />
-                      Access Groups
-                    </Link>
-                  </ListItem>
-                  <ListItem>
-                    <Link>
-                      <img src={warningicon} alt="warningicon" />
-                      Access Codes
-                    </Link>
-                  </ListItem>
-                </List>
-              </AccordionDetails>
-            </Accordion>
-          </ListItem>
-          <ListItem className={styles.sidebar_smartmenu}>
-            <Accordion
-              expanded={expanded === "panel2"}
-              onChange={handleChange("panel2")}
+              <Link>
+                <img src={smartaccess} alt="smartaccess" />
+                SmartAccess
+              </Link>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List className={styles.sidebar_submenu}>
+                <ListItem>
+                  <Link>
+                    <img src={calendaricon} alt="calendaricon" />
+                    Access Management
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    <img src={teamicon} alt="teamicon" />
+                    Access Groups
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    <img src={warningicon} alt="warningicon" />
+                    Access Codes
+                  </Link>
+                </ListItem>
+              </List>
+            </AccordionDetails>
+          </Accordion>
+        </ListItem>
+        <ListItem className={styles.sidebar_smartmenu}>
+          <Accordion
+            expanded={expanded === "panel2"}
+            onChange={handleChange("panel2")}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1bh-content"
-                id="panel1bh-header"
-              >
-                <Link>
-                  <img src={timelineicon} alt="timelineicon" />
-                  <Box sx={{ display: "flex", gap: 1 }}>
-                    {`SmartOperations`}
-                    {expanded !== "panel2" && (
+              <Link>
+                <img src={timelineicon} alt="timelineicon" />
+                <Box sx={{ display: "flex", gap: 1 }}>
+                  {`SmartOperations`}
+                  {expanded !== "panel2" && (
+                    <Box className={styles.notification_number}>3</Box>
+                  )}
+                </Box>
+              </Link>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List className={styles.sidebar_submenu}>
+                <ListItem>
+                  <Link>
+                    <img src={notificationicon} alt="calendaricon" />
+                    Alerts / Issues
+                    {expanded === "panel2" && (
                       <Box className={styles.notification_number}>3</Box>
                     )}
-                  </Box>
-                </Link>
-              </AccordionSummary>
-              <AccordionDetails>
-                <List className={styles.sidebar_submenu}>
-                  <ListItem>
-                    <Link>
-                      <img src={notificationicon} alt="calendaricon" />
-                      Alerts / Issues
-                      {expanded === "panel2" && (
-                        <Box className={styles.notification_number}>3</Box>
-                      )}
-                    </Link>
-                  </ListItem>
-                  <ListItem>
-                    <Link>
-                      <img src={messageicon} alt="messageicon" />
-                      Notifications
-                    </Link>
-                  </ListItem>
-                  <ListItem>
-                    <Link>
-                      <img src={pdficon} alt="pdficon" />
-                      Reports
-                    </Link>
-                  </ListItem>
-                </List>
-              </AccordionDetails>
-            </Accordion>
-          </ListItem>
-        </List>
-        <Box className={styles.quick_links_menu} onClick={toggleDrawer(true)}>
-          <Box className={styles.quick_links_logo}>
-            <img src={quickicon} alt="quickicon" />
-          </Box>
-          Quick Links
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    <img src={messageicon} alt="messageicon" />
+                    Notifications
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    <img src={pdficon} alt="pdficon" />
+                    Reports
+                  </Link>
+                </ListItem>
+              </List>
+            </AccordionDetails>
+          </Accordion>
+        </ListItem>
+      </List>
+      <Box className={styles.quick_links_menu} onClick={toggleDrawer(true)}>
+        <Box className={styles.quick_links_logo}>
+          <img src={quickicon} alt="quickicon" />
         </Box>
-
-        <Quicklinks open={open} onClose={toggleDrawer(false)} />
+        Quick Links
       </Box>
-      {width <= 991 && (
-        <Backdrop
-          sx={(theme) => ({ color: "#fff", zIndex: theme.zIndex.drawer + 1 })}
-          open={!isMenuOpen}
-          onClick={() => STATE?.setisMenuOpen((prev) => !prev)}
-        />
-      )}
-    </>
-  );
+
+      <Quicklinks open={open} onClose={() => toggleDrawer(false)} />
+    </Box>
+    {width <= 991 && (
+      <Backdrop
+        sx={(theme) => ({ color: "#fff", zIndex: theme.zIndex.drawer + 1 })}
+        open={!isMenuOpen}
+        onClick={() => STATE?.setisMenuOpen((prev) => !prev)}
+      />
+    )}
+  </>);
 };
 
 export default Sidebar;
