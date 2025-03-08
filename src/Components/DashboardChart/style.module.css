@@ -1,0 +1,169 @@
+/* Room Chart Css */
+
+
+.room_chart_card {
+  padding: 41px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 0px #3540520D;
+  background-color: #fff;
+}
+
+.status_indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.room_chart_card .room_chart_header {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.room_chart_card .room_chart_header svg {
+  color: #000000DE;
+  cursor: pointer;
+}
+
+.room_chart_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.room_chart_header h3 {
+  color: #000000DE;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.room_chart_header p {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.chart_footer p {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.chart_footer p span:first-child {
+  color: #3D3D3D;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.chart_footer p span {
+  font-size: 14px;
+}
+
+.chart_footer h6 {
+  color: #0000008A;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.room_chart {
+  width: 100%;
+  height: 300px;
+}
+
+.tooltip_container {
+  background-color: white;
+  padding: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.chart_status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.chart_status p {
+  color: #000000;
+  font-size: 14px;
+}
+
+.tooltip_text {
+  font-size: 14px;
+}
+
+.tooltip_label {
+  font-weight: 500;
+}
+
+
+/* Battert Chart Css */
+
+.room_chart_card .health_status {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.room_chart_card .health_status_percentage {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.health_status_title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.critical_percentage {
+  font-weight: 700;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.battery_chart_footer p {
+  font-size: 14px;
+  color: #979797;
+}
+
+.health_chart_status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.chart_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:1440px) {
+  .room_chart_card {
+    padding: 25px;
+  }
+}
+
+@media (max-width:575px) {
+  .room_chart_wrap {
+    flex-wrap: wrap;
+  }
+
+  .chart_status{
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,210 @@
+.sidebar_wrap {
+    max-width: 260px;
+    width: 100%;
+    background-color: #226FC8;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    transition: all 0.5s ease;
+    z-index: 99;
+}
+
+.closeSidebar {
+    left: 0%;
+}
+
+.openSidebar {
+    left: -100%;
+}
+
+.navbar_logo img {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.sidebar_menu li {
+    cursor: pointer;
+    padding: 12px 21px 12px 27px;
+}
+
+.sidebar_menu li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: unset;
+}
+
+.sidebar_menu li:nth-child(2) {
+    background-color: #1565C0;
+}
+
+.sidebar_menu li:nth-child(3) {
+    background-color: #1565C0;
+}
+
+.sidebar_smartmenu {
+    padding: 0px !important;
+    background-color: #1565C0;
+}
+
+.sidebar_menu .sidebar_menu_active {
+    background-color: #1E88E5 !important;
+}
+
+.sidebar_menu .sidebar_menu_active a {
+    font-weight: 600;
+}
+
+.sidebar_menu li svg {
+    color: #fff;
+}
+
+.sidebar_menu li button {
+    padding: 0px 25px 0px 25px;
+}
+
+.sidebar_menu :global(.MuiPaper-root) {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: unset;
+    font-weight: 400;
+    color: #fff;
+}
+
+.sidebar_menu .sidebar_smartmenu :global(.Mui-expanded) {
+    margin: 0px;
+}
+
+.sidebar_menu :global(.MuiAccordionSummary-root.Mui-expanded) {
+    min-height: 44px;
+    background-color: #226FC8 !important;
+}
+
+.sidebar_menu :global(.MuiAccordionDetails-root) {
+    padding: 0px;
+}
+
+.sidebar_submenu {
+    padding: 0px;
+}
+
+.sidebar_submenu li {
+    padding: 12px 25px;
+}
+
+.quick_links_menu {
+    background-color: #1565C0;
+    width: 100%;
+    bottom: 0px;
+    top: auto;
+    position: absolute;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.quick_links_logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    border: 2px solid #006FFD;
+    background-color: #fff;
+    box-shadow: 0px 0px 8.72px 0px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar_wrap .sidebar_menu {
+    padding: 0px;
+}
+
+.quicklinks_container {
+    position: relative;
+}
+
+.quick_links_menu {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quick_links_logo img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.quick_sidemenu {
+    position: absolute;
+    bottom: -150px;
+    /* Initially hidden below the screen */
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.quick_sidemenu.show {
+    transform: translateY(0);
+    opacity: 1;
+    bottom: 0;
+}
+
+.create_access_card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+}
+
+.create_access_card img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.create_access_card:hover {
+    background-color: #f0f0f0;
+}
+
+.notification_number {
+    width: 20px;
+    height: 20px;
+    background-color: #FFCC00;
+    color: #000000;
+    font-size: 12px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+@media (max-width:991px) {
+    .sidebar_wrap {
+        left: -100%;
+        z-index: 9999;
+    }
+
+    .closeSidebar {
+        left: 0;
+    }
+}

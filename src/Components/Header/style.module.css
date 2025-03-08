@@ -1,0 +1,257 @@
+.header_topbar {
+    background-color: #fff;
+    border-bottom: 1px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    padding: 15px 41px 15px 41px;
+    justify-content: space-between;
+    position: fixed;
+    width: calc(100% - 260px);
+    z-index: 99;
+    margin-left: 260px;
+    transition: all 0.5s ease;
+    right: 0px;
+}
+
+.header_expanded {
+    margin-left: 0px;
+    width: 100%;
+}
+
+.header_title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header_title svg {
+    color: #000;
+}
+
+.header_title h2 {
+    color: #1565C0;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.header_title p {
+    color: #000000DE;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header_topbar .navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    color: #2D2D2D;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: unset;
+    max-width: 260px;
+    width: 100%;
+    justify-content: center;
+}
+
+.user_profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.navbar_nav .user_profile::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #4CAF50;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    position: absolute;
+    left: 40px;
+    top: 2px;
+}
+
+.header_topbar .user_profile_menu {
+    padding: 0px;
+}
+
+.header_topbar .user_profile_menu a {
+    padding: 0px;
+    color: #000000DE;
+}
+
+.header_topbar .user_profile p {
+    color: #000000DE;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header_topbar .user_profile span {
+    color: #00000087;
+    font-size: 12px;
+}
+
+.header_topbar .navbar_nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0px;
+}
+
+.header_topbar .navbar_nav li {
+    padding: 0px;
+    max-width: fit-content;
+}
+
+.navbar_nav li a {
+    padding: 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.search_bar a svg {
+    color: #9E9E9E;
+    font-size: 24px;
+}
+
+.notification_dropdown {
+    padding: 0px;
+    position: relative;
+}
+
+.notification_dropdown .notification_badge {
+    content: '';
+    width: 26px;
+    height: 20px;
+    background-color: #1E88E5;
+    border: 1px solid #fff;
+    box-shadow: 0px 1px 4px 0px #00000040;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.notification_dropdown .notification_number {
+    background-color: #FE0000;
+}
+
+.notification_panel {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.notification_panel .notification_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification_panel .notification_header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.notification_panel .header_actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification_panel .new_notification {
+    background-color: #f0e6ff;
+    color: #1565c0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.notification_panel .notification_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification_panel .notification_item {
+    display: flex;
+    padding: 16px;
+    gap: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+
+.notification_panel .notification_content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification_panel .notification_title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.notification_panel .notification_message {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.notification_panel .notification_time {
+    font-size: 12px;
+    color: #999;
+}
+
+.notification_panel .notification_footer {
+    padding: 16px;
+}
+
+.notification_panel .view_all_button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1565c0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+@media (max-width:1024px) {
+    .header_topbar .user_profile p {
+        font-size: 14px;
+    }
+
+    .notification_panel .notification_header h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:991px) {
+    .header_topbar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:575px) {
+    .header_topbar .navbar_nav {
+        gap: 10px;
+    }
+}

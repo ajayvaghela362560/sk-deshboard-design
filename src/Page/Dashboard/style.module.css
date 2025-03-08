@@ -1,0 +1,252 @@
+.dashboard_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.dashboard_main_content {
+    margin-top: 90px;
+    padding: 20px;
+}
+
+.dashboard_title h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000000c9;
+}
+
+.dashboard_title span {
+    color: #000000cc;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.welcome_user {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.welcome_user p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #00000054;
+}
+
+.dashboard_wrap {
+    margin-left: 260px;
+    padding-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.dashboardOpen {
+    margin-left: 0px;
+}
+
+.dashboard_wrap .user_status {
+    background-color: transparent;
+    box-shadow: unset;
+}
+
+.user_status button:first-child {
+    padding: 5px 0px;
+}
+
+.dashboard_wrap .user_status button {
+    border-bottom: 1px solid #a8a4a48a;
+}
+
+.dashboard_wrap .user_status button svg {
+    color: #000;
+}
+
+.user_status h3 {
+    color: #000000b8;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user_status h3 span {
+    color: #00000099;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.user_arrivals_card {
+    box-shadow: 0px 0px 14px 0px #3540520D;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.total_arrivals_user {
+    width: 125px;
+    height: 125px;
+    background-color: #FFA000;
+    border-radius: 100px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.house_guests {
+    background-color: #4CAF50;
+}
+
+.departures_guests {
+    background-color: #226FC8;
+}
+
+.user_arrivals_card h3 {
+    font-size: 22px;
+    color: #000000DE;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.today_arrivals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.today_arrivals svg {
+    color: #D32F2F;
+    cursor: pointer;
+}
+
+.today_arrivals button {
+    background-color: #1565C0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.chart_issues {
+    border: 1px solid #D32F2F;
+    background-color: #D32F2F1C;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 24px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.chart_issues svg {
+    color: #D32F2F;
+    font-size: 32px;
+}
+
+.chart_issues p {
+    color: #000000DE;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.chart_issues span {
+    color: #00000099;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.total_issues {
+    width: 85px;
+    height: 85px;
+    border: 2px solid #D32F2F;
+    border-radius: 100px;
+    background-color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    color: #D32F2F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.user_status :global(.MuiAccordionDetails-root ){
+    padding: 8px 0px !important; 
+}
+
+@media (max-width:1024px) {
+    .dashboard_title h1 {
+        font-size: 22px;
+    }
+
+    .dashboard_title span {
+        font-size: 18px;
+    }
+
+    .user_status h3 {
+        font-size: 20px;
+    }
+
+    .total_arrivals_user {
+        font-size: 30px;
+    }
+
+    .chart_issues p {
+        font-size: 20px;
+    }
+
+    .chart_issues {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width:991px) {
+    .dashboard_wrap {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:767px) {
+    .dashboard_title span {
+        font-size: 16px;
+    }
+
+    .user_status h3 {
+        font-size: 18px;
+    }
+    .chart_issues{
+        padding: 15px;
+    }
+    .chart_issues p{
+        font-size: 18px;
+    }
+    .chart_issues span{
+        font-size: 14px;
+    }
+    .chart_status{
+        min-width: 220px;
+        width: 100%;
+    }
+    .dashboard_title{
+        gap: 15px;
+    }
+}

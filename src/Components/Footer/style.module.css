@@ -1,0 +1,38 @@
+.powered_by_section{
+    display: flex;
+    background-color: #fff;
+    padding: 15px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+.powered_by_section p{
+    color: #3D3D3D;
+    font-weight: 500;
+    font-size: 14px;
+}
+.footer_menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.footer_menu li{
+    padding: 0px;
+    max-width: fit-content;
+}
+.footer_menu li a{
+    color: #000000DE;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: unset;
+}
+.version_detail{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+@media (max-width:991px) {
+    .powered_by_section{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
