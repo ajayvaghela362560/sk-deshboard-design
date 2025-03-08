@@ -1,4 +1,4 @@
-.quick_sidemenu{
+.quick_sidemenu {
     max-width: 260px;
     width: 100%;
     background-color: #1565C0DE;
@@ -8,7 +8,8 @@
     min-height: 600px;
     overflow-y: auto;
 }
-.quick_sidemenu .create_access_card{
+
+.quick_sidemenu .create_access_card {
     max-width: 125px;
     height: 125px;
     border-radius: 100%;
@@ -22,11 +23,16 @@
     flex-direction: column;
     margin: 0 auto 30px auto;
     text-decoration: unset;
-    
+
 }
-.quick_sidemenu .create_access_card P{
+
+.quick_sidemenu .create_access_card P {
     color: #1565C0;
     font-size: 14px;
     font-weight: 400;
     margin-top: 5px;
+}
+
+:global(.MuiDrawer-root) {
+    z-index: 99999999 !important;
 }

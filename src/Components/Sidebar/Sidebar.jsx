@@ -54,7 +54,7 @@ const Sidebar = ({ STATE }) => {
   };
 
   return (<>
-    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar} ${open ? styles.quick_links_menu : ""}`}>
+    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar} ${open ? styles.sidebar_expand : ""}`}>
       <List className={styles.sidebar_menu}>
         <Link href="#" className={styles.navbar_logo}>
           <img
@@ -162,7 +162,7 @@ const Sidebar = ({ STATE }) => {
         Quick Links
       </Box>
 
-      <Quicklinks open={open} onClose={() => toggleDrawer(false)} />
+      <Quicklinks open={open} onClose={() => toggleDrawer(false)}  />
     </Box>
     {width <= 991 && (
       <Backdrop
