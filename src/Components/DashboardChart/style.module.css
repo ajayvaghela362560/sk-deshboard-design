@@ -152,6 +152,12 @@
   justify-content: center;
 }
 
+@media (min-width:1600px) {
+  .chart_status{
+    min-width: 200px;
+  }
+}
+
 @media (max-width:1440px) {
   .room_chart_card {
     padding: 25px;
