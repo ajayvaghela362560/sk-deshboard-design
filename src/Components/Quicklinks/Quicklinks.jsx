@@ -6,9 +6,8 @@ import quicknotification from '../../assets/Icons/quick-notification.svg'
 import logouticon from '../../assets/Icons/logout-icon.svg'
 import editcalendar from '../../assets/Icons/calendar-edit.svg'
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 
-export default function Quicklinks({ open, onClose }) {
+const Quicklinks = ({ open, onClose }) => {
 
   const DrawerList = (
     <Box className={styles.quick_sidemenu}>
@@ -44,3 +43,5 @@ export default function Quicklinks({ open, onClose }) {
     </div>
   );
 }
+
+export default Quicklinks;

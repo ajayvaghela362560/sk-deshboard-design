@@ -18,15 +18,21 @@ const Header = ({ STATE }) => {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [anchorE2, setAnchorE2] = React.useState(null);
+  const notificationOpen = Boolean(anchorE2);
+  const [anchorE3, setAnchorE3] = React.useState(null);
+  const messageOpen = Boolean(anchorE3);
+  const [anchorE4, setAnchorE4] = React.useState(null);
+  const countryOpen = Boolean(anchorE4);
+  const isMenuOpen = STATE?.isMenuOpen;
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  const [anchorE2, setAnchorE2] = React.useState(null);
-  const notificationOpen = Boolean(anchorE2);
 
   const handleNotificationClick = (event) => {
     setAnchorE2(event.currentTarget);
@@ -36,9 +42,6 @@ const Header = ({ STATE }) => {
     setAnchorE2(null);
   }
 
-  const [anchorE3, setAnchorE3] = React.useState(null);
-  const messageOpen = Boolean(anchorE3);
-
   const handleMessageClick = (event) => {
     setAnchorE3(event.currentTarget);
   };
@@ -46,9 +49,6 @@ const Header = ({ STATE }) => {
   const handleMessageClose = () => {
     setAnchorE3(null);
   };
-
-  const [anchorE4, setAnchorE4] = React.useState(null);
-  const countryOpen = Boolean(anchorE4);
 
   const handleCountryClick = (event) => {
     setAnchorE4(event.currentTarget);
@@ -63,7 +63,6 @@ const Header = ({ STATE }) => {
     STATE.setisMenuOpen(prev => !prev);
   }
 
-  const isMenuOpen = STATE?.isMenuOpen;
 
   return (
     <>
@@ -108,16 +107,16 @@ const Header = ({ STATE }) => {
                     padding: '0px',
                     backgroundColor: 'transparent !important',
                   },
-                  '& a':{
-                    color:'#000',
-                    textDecoration:'unset',
-                    display:'flex',
-                    alignItems:'center',
-                    fontSize:'14px',
-                    paddingLeft:'10px',
-                    '& img':{
-                      width:'35px',
-                      height:'35px',
+                  '& a': {
+                    color: '#000',
+                    textDecoration: 'unset',
+                    display: 'flex',
+                    alignItems: 'center',
+                    fontSize: '14px',
+                    paddingLeft: '10px',
+                    '& img': {
+                      width: '35px',
+                      height: '35px',
                     }
                   }
                 }}

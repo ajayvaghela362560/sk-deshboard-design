@@ -38,7 +38,8 @@
     align-items: center;
     gap: 10px;
 }
-.header_title h3 img{
+
+.header_title h3 img {
     width: 25px;
     height: 25px;
 }
@@ -201,7 +202,6 @@
     border-bottom: 1px solid #eee;
 }
 
-
 .notification_panel .notification_content {
     flex: 1;
     min-width: 0;
@@ -261,7 +261,9 @@
 }
 
 @media (max-width:767px) {
-    .header_title h3,.header_title p{
+
+    .header_title h3,
+    .header_title p {
         display: none;
     }
 }
@@ -270,10 +272,12 @@
     .header_topbar .navbar_nav {
         gap: 15px;
     }
-    .header_topbar{
+
+    .header_topbar {
         padding: 15px;
     }
-    .user_detail{
+
+    .user_detail {
         display: none;
     }
 }

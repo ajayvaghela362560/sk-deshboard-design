@@ -11,7 +11,7 @@ import { Typography, Box, Menu, MenuItem, Link } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import styles from "./style.module.css";
 
-function CurrentRoomStatus() {
+const CurrentRoomStatus = () => {
   const data = [
     { name: "In-house Guests", value: 123, color: "#4CAF50" },
     { name: "Arrivals", value: 8, color: "#FFA000" },
@@ -57,18 +57,17 @@ function CurrentRoomStatus() {
       fill,
     } = props;
 
-    // Calculate slight offset for the active slice
     const RADIAN = Math.PI / 180;
-    const offsetX = Math.cos(-midAngle * RADIAN) * 10; // Move outward
+    const offsetX = Math.cos(-midAngle * RADIAN) * 10;
     const offsetY = Math.sin(-midAngle * RADIAN) * 10;
 
     return (
       <g>
         <Sector
-          cx={cx + offsetX} // Shift the active slice
+          cx={cx + offsetX}
           cy={cy + offsetY}
           innerRadius={innerRadius}
-          outerRadius={outerRadius + 10} // Increase outer radius for effect
+          outerRadius={outerRadius + 10}
           startAngle={startAngle}
           endAngle={endAngle}
           fill={fill}

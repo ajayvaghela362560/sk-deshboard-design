@@ -10,22 +10,22 @@
     font-weight: 500;
     font-size: 14px;
 }
-.footer_menu{
+.powered_by_section .footer_menu{
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.footer_menu li{
+.powered_by_section .footer_menu li{
     padding: 0px;
     max-width: fit-content;
 }
-.footer_menu li a{
+.powered_by_section .footer_menu li a{
     color: #000000DE;
     font-size: 14px;
     font-weight: 400;
     text-decoration: unset;
 }
-.version_detail{
+.powered_by_section .version_detail{
     display: flex;
     align-items: center;
     gap: 12px;
@@ -37,11 +37,11 @@
     }
 }
 @media (max-width:575px) {
-    .version_detail{
+    .powered_by_section .version_detail{
         gap: 10px;
         flex-wrap: wrap;
     }
-    .footer_menu{
+    .powered_by_section .footer_menu{
         flex-wrap: wrap;
         gap: 10px;
     }
