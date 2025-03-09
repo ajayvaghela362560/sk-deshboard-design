@@ -12,19 +12,19 @@ export default function Quicklinks({ open, onClose }) {
 
   const DrawerList = (
     <Box className={styles.quick_sidemenu}>
-      <Link href='#' className={styles.create_access_card}>
+      <Link href='#' className={styles.create_access_card} onClick={onClose}>
         <img src={quickcalendar} alt="calender" />
         <Typography>Create Access</Typography>
       </Link>
-      <Link href='#' className={styles.create_access_card}>
+      <Link href='#' className={styles.create_access_card} onClick={onClose}>
         <img src={editcalendar} alt="calender" />
         <Typography>Edit Access</Typography>
       </Link>
-      <Link href='#' className={styles.create_access_card}>
+      <Link href='#' className={styles.create_access_card} onClick={onClose}>
         <img src={quicknotification} alt="calender" />
         <Typography>Alerts</Typography>
       </Link>
-      <Link href='#' className={styles.create_access_card}>
+      <Link href='#' className={styles.create_access_card} onClick={onClose}>
         <img src={logouticon} alt="calender" />
         <Typography>Logout</Typography>
       </Link>

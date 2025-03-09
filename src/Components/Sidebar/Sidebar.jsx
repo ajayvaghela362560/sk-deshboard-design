@@ -47,10 +47,14 @@ const Sidebar = ({ STATE }) => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const [open, setOpen] = useState(false);
+  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
 
-  const toggleDrawer = (isOpen) => () => {
-    setOpen(isOpen);
+  const handleQuickLinksOpen = () => {
+    setIsQuickLinksOpen(true);
+  };
+
+  const handleQuickLinksClose = () => {
+    setIsQuickLinksOpen(false);
   };
 
   return (<>
@@ -155,14 +159,14 @@ const Sidebar = ({ STATE }) => {
           </Accordion>
         </ListItem>
       </List>
-      <Box className={styles.quick_links_menu} onClick={toggleDrawer(true)}>
+      <Box className={styles.quick_links_menu} onClick={handleQuickLinksOpen}>
         <Box className={styles.quick_links_logo}>
           <img src={quickicon} alt="quickicon" />
         </Box>
         Quick Links
       </Box>
 
-      <Quicklinks open={open} onClose={() => toggleDrawer(false)}  />
+      <Quicklinks open={isQuickLinksOpen} onClose={handleQuickLinksClose} />
     </Box>
     {width <= 991 && (
       <Backdrop
