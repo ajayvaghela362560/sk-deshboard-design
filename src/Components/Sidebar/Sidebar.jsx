@@ -42,12 +42,11 @@ const Sidebar = ({ STATE }) => {
   const [expanded, setExpanded] = useState(false);
   const isMenuOpen = STATE?.isMenuOpen;
   const width = useWindowWidth();
+  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
-  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
 
   const handleQuickLinksOpen = () => {
     setIsQuickLinksOpen(true);
@@ -57,8 +56,9 @@ const Sidebar = ({ STATE }) => {
     setIsQuickLinksOpen(false);
   };
 
+
   return (<>
-    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar} ${open ? styles.sidebar_expand : ""}`}>
+    <Box className={`${styles.sidebar_wrap} ${isMenuOpen ? styles.openSidebar : styles.closeSidebar}`}>
       <List className={styles.sidebar_menu}>
         <Link href="#" className={styles.navbar_logo}>
           <img
@@ -165,17 +165,11 @@ const Sidebar = ({ STATE }) => {
         </Box>
         Quick Links
       </Box>
-
       <Quicklinks open={isQuickLinksOpen} onClose={handleQuickLinksClose} />
     </Box>
-    {width <= 991 && (
-      <Backdrop
-        sx={(theme) => ({ color: "#fff", zIndex: theme.zIndex.drawer + 1 })}
-        open={!isMenuOpen}
-        onClick={() => STATE?.setisMenuOpen((prev) => !prev)}
-      />
-    )}
-  </>);
+    {isMenuOpen && (
+      <Box className={styles.backdrop_close} onClick={() => STATE?.setisMenuOpen((prev) => !prev)}></Box>
+    )}    </>);
 };
 
 export default Sidebar;

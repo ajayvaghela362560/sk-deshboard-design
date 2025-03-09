@@ -67,7 +67,7 @@ const Header = ({ STATE }) => {
 
   return (
     <>
-      <Box className={`${styles.header_topbar} ${isMenuOpen ? styles.header_expanded : styles.headerCollapsed}`}>
+      <Box className={`${styles.header_topbar} ${isMenuOpen ? styles.header_expanded : ''}`}>
         <Box className={styles.header_title}>
           <Link href='#' onClick={handleMenuClick}>
             <MenuRoundedIcon />

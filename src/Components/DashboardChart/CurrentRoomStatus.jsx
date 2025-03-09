@@ -150,13 +150,11 @@ function CurrentRoomStatus() {
         </Box>
 
         <Box className={styles.chart_footer}>
-          <Typography>
-            <Typography variant="span">{66}</Typography>
-            <Typography variant="span">/ {200}</Typography>
-            <Typography variant="h6">
-              {" "}
-              rooms are available as of today.
-            </Typography>
+          <Typography variant="span">{66}</Typography>
+          <Typography variant="span">/ {200}</Typography>
+          <Typography variant="h6">
+            {" "}
+            rooms are available as of today.
           </Typography>
         </Box>
       </Box>

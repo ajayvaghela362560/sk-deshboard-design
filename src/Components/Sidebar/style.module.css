@@ -6,7 +6,7 @@
     height: 100%;
     top: 0px;
     transition: all 0.5s ease;
-    z-index: 99;
+    z-index: 999;
 }
 
 .closeSidebar {
@@ -201,11 +201,18 @@
 
 @media (max-width:991px) {
     .sidebar_wrap {
-        left: -100%;
-        z-index: 9999;
+        left: -280px;
     }
 
-    .closeSidebar {
+    .sidebar_wrap.openSidebar {
         left: 0;
+    }
+
+    .backdrop_close {
+        width: 100%;
+        background-color: #0000009e;
+        position: fixed;
+        inset: 0;
+        z-index: 99;
     }
 }
